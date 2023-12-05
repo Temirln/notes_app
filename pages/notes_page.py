@@ -30,7 +30,7 @@ class NotePage(ctk.CTkFrame):
             text="New Note",
             width=250,
             font=self.winfo_toplevel().button_font,
-            command=self.master.new_note,
+            command=self.new_note,
         )
         self.new_note_btn.grid(column=0, row=0, padx=10, pady=5)
 
@@ -41,7 +41,7 @@ class NotePage(ctk.CTkFrame):
             fg_color="#307C39",
             hover_color="#245E2B",
             font=self.winfo_toplevel().button_font,
-            command=self.master.save_note,
+            command=self.save_note,
         )
         self.save_note_btn.grid(column=0, row=1, padx=10, pady=5)
 
@@ -52,7 +52,7 @@ class NotePage(ctk.CTkFrame):
             fg_color="#C73E1D",
             hover_color="#8C2D15",
             font=self.winfo_toplevel().button_font,
-            command=self.master.delete_note,
+            command=self.delete_note,
             state="disabled",
         )
         self.delete_note_btn.grid(column=0, row=2, padx=10, pady=5)
@@ -76,7 +76,7 @@ class NotePage(ctk.CTkFrame):
         )
         self.user_title.grid(column=1, row=0, padx=(0, 5), pady=5, sticky="ew")
 
-        self.logout_btn = ctk.CTkButton(self.main_window, command=self.master.logout)
+        self.logout_btn = ctk.CTkButton(self.main_window, command=self.logout)
         self.logout_btn.grid(column=2, row=0, padx=(0, 5), pady=5, sticky="ew")
 
         self.title = ctk.CTkEntry(
